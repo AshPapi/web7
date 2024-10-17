@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <title>Ашот Папикян Лабораторная 7</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='style.css'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <header class="border-bottom d-flex justify-content-center align-items-center text-center text-white">
+        <div>
+            <h1 class="main_text"> FunAnimal Gallery </h1>
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <div class="gallery">
+            <div class="gallery__slider d-flex justify-content-center align-items-center" id="gallerySlider">
+                <div class="photo_space active" data-index="1">
+                    <img src="photo_1_2024-10-17_20-25-56.jpg" alt="Image 1" class="gallery__slide">
+                </div>
+                <div class="photo_space active" data-index="2">
+                    <img src="photo_2_2024-10-17_20-25-56.jpg" alt="Image 2" class="gallery__slide">
+                </div>
+                <div class="photo_space active" data-index="3">
+                    <img src="photo_3_2024-10-17_20-25-56.jpg" alt="Image 3" class="gallery__slide">
+                </div>
+                <div class="photo_space" data-index="4">
+                    <img src="photo_4_2024-10-17_20-25-56.jpg" alt="Image 4" class="gallery__slide">
+                </div>
+                <div class="photo_space" data-index="5">
+                    <img src="photo_5_2024-10-17_20-25-56.jpg" alt="Image 5" class="gallery__slide">
+                </div>
+                <div class="photo_space" data-index="6">
+                    <img src="photo_6_2024-10-17_20-25-56.jpg" alt="Image 6" class="gallery__slide">
+                </div>
+                <div class="photo_space" data-index="7">
+                    <img src="photo_7_2024-10-17_20-25-56.jpg" alt="Image 7" class="gallery__slide">
+                </div>
+                <div class="photo_space" data-index="8">
+                    <img src="photo_8_2024-10-17_20-25-56.jpg" alt="Image 8" class="gallery__slide">
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center mt-3">
+                <span class="gallery__pager-current" id="currentPager">1</span> / <span class="gallery__pager-total" id="totalPager">3</span>
+            </div>
+
+            <div class="gallery_nav d-flex justify-content-center mt-3">
+                <button class="btn btn-light btn-sm mr-4" id="prevBtn"><</button>
+                <button class="btn btn-light btn-sm ml-4" id="nextBtn">></button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="d-flex justify-content-center align-items-center text-white main_text text-center">
+        <h1>Ашот Папикян</h1>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
