@@ -1,5 +1,6 @@
 $(document).ready(function() {
     let slides = $(".photo_space");
+    let gallerySlider = $(".gallery__slider");
     let currentPager = $("#currentPager");
     let totalPager = $("#totalPager");
     let prevBtn = $("#prevBtn");
@@ -10,11 +11,10 @@ $(document).ready(function() {
     let currentPage = 1;
 
     function updateGallery() {
-        slides.removeClass("active");
-        let start = (currentPage - 1) * slidesPerPage;
-        let end = start + slidesPerPage;
-        slides.slice(start, end).addClass("active");
-
+        let slideWidth = $(".gallery__slide").outerWidth(true); // Ширина одного слайда
+        let offset = -((currentPage - 1) * slideWidth * slidesPerPage); // Смещение влево
+        gallerySlider.animate({ "left": offset + "px" }, 500); // Анимация сдвига
+        
         currentPager.text(currentPage);
         totalPager.text(totalPages);
     }
