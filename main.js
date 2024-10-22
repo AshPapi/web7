@@ -11,9 +11,9 @@ $(document).ready(function() {
     let currentPage = 1;
 
     function updateGallery() {
-        let slideWidth = $(".gallery__slide").outerWidth(true); // Ширина одного слайда
+        let slideWidth = $(".gallery__slide").outerWidth(true); // Ширина одного слайда с учетом отступов
         let offset = -((currentPage - 1) * slideWidth * slidesPerPage); // Смещение влево
-        gallerySlider.animate({ "left": offset + "px" }, 500); // Анимация сдвига
+        gallerySlider.css("transform", `translateX(${offset}px)`); // Применение трансформации
         
         currentPager.text(currentPage);
         totalPager.text(totalPages);
