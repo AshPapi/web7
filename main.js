@@ -1,6 +1,5 @@
 $(document).ready(function() {
     let slides = $(".photo_space");
-    let gallerySlider = $(".gallery__slider");
     let currentPager = $("#currentPager");
     let totalPager = $("#totalPager");
     let prevBtn = $("#prevBtn");
@@ -11,10 +10,11 @@ $(document).ready(function() {
     let currentPage = 1;
 
     function updateGallery() {
-        let slideWidth = $(".gallery__slide").outerWidth(true); // Ширина одного слайда с учетом отступов
-        let offset = -((currentPage - 1) * slideWidth * slidesPerPage); // Смещение влево
-        gallerySlider.css("transform", `translateX(${offset}px)`); // Применение трансформации
-        
+        slides.removeClass("active");
+        let start = (currentPage - 1) * slidesPerPage;
+        let end = start + slidesPerPage;
+        slides.slice(start, end).addClass("active");
+
         currentPager.text(currentPage);
         totalPager.text(totalPages);
     }
